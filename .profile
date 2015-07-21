@@ -12,6 +12,7 @@ fi
 alias start-emacs='sudo env TERM=xterm-256color emacs --daemon'
 alias kill-emacs='env TERM=xterm-256color emacsclient -e '\''(kill-emacs)'\'''
 alias edit='sudo env TERM=xterm-256color emacsclient -c -nw'
+alias lsp4='p4 changes -l -u jdesjarlais | less'
 
 
 # Start up commands
