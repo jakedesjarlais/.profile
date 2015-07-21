@@ -10,6 +10,11 @@
 ;; associate .cu files with c++ mode
 (add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cuh\\'" . c++-mode))
+;; tabs
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+    ;; c++ tabs
+    (setq-default c-basic-offset 4)
 
 
 
@@ -30,6 +35,8 @@
 (define-key evil-normal-state-map (kbd "C-f") ctl-x-map)
 (define-key evil-insert-state-map (kbd "C-f") ctl-x-map)
 (define-key evil-normal-state-map (kbd "SPC") 'evil-scroll-line-to-center)
+(define-key evil-normal-state-map (kbd "m")   'scroll-up-command)
+(define-key evil-normal-state-map (kbd "M")   'scroll-down-command)
 
 
 ;;;     COLOR THEME     ;;;
