@@ -9,6 +9,7 @@
 (setq column-number-mode t)
 ;; associate .cu files with c++ mode
 (add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.cuh\\'" . c++-mode))
 
 
 

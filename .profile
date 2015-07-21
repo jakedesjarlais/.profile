@@ -9,9 +9,9 @@ else
 fi
 
 # Aliases
-alias start-emacs='env TERM=xterm-256color emacs --daemon'
+alias start-emacs='sudo env TERM=xterm-256color emacs --daemon'
 alias kill-emacs='env TERM=xterm-256color emacsclient -e '\''(kill-emacs)'\'''
-alias edit='env TERM=xterm-256color emacsclient -c -nw'
+alias edit='sudo env TERM=xterm-256color emacsclient -c -nw'
 
 
 # Start up commands
