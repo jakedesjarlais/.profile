@@ -1,6 +1,7 @@
 # Environment Variables
 export P4CONFIG=/.p4config
 export LD_LIBRARY_PATH=/sw/dev/gpu_drv/chips_a/drivers/gpgpu/_out/Linux_amd64_debug/bin/
+export PATH=$PATH:/shared/bin
 if [ $EUID -eq 0 ]; then
     # root prompt
     export PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
