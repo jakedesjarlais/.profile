@@ -1,6 +1,6 @@
 # Environment Variables
 export P4CONFIG=/.p4config
-export LD_LIBRARY_PATH=/sw/dev/gpu_drv/chips_a/drivers/gpgpu/_out/Linux_amd64_debug/bin/
+export LD_LIBRARY_PATH=/sw/dev/gpu_drv/cuda_a/drivers/gpgpu/_out/Linux_amd64_debug/bin/
 export PATH=$PATH:/shared/bin
 if [ $EUID -eq 0 ]; then
     # root prompt
