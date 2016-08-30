@@ -11,9 +11,9 @@ else
 fi
 
 ########### Aliases ########### 
-alias start-emacs='env TERM=xterm-256color /usr/local/Cellar/emacs/24.5/bin/emacs-24.5 --daemon'
-alias kill-emacs='env TERM=xterm-256color /usr/local/Cellar/emacs/24.5/bin/emacsclient -e '\''(kill-emacs)'\'''
-alias edit='env TERM=xterm-256color /usr/local/Cellar/emacs/24.5/bin/emacsclient -c -nw'
+alias start-emacs='env TERM=xterm-256color emacs --daemon'
+alias kill-emacs='env TERM=xterm-256color emacsclient -e '\''(kill-emacs)'\'''
+alias edit='env TERM=xterm-256color emacsclient -c -nw'
 alias lsp4='p4 changes -l -u jdesjarlais | less'
 
 
