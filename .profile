@@ -1,7 +1,7 @@
 ########### Environment Variables ###########
 export P4CONFIG=/.p4config
-export LD_LIBRARY_PATH=/sw/dev/gpu_drv/cuda_a/drivers/gpgpu/_out/Linux_amd64_debug/bin/
-export PATH=$PATH:/shared/bin
+export PATH=$PATH:/scripts/bash
+export TERM=xterm-256color
 if [ $EUID -eq 0 ]; then
     # root prompt
     export PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
@@ -11,9 +11,9 @@ else
 fi
 
 ########### Aliases ########### 
-alias start-emacs='env TERM=xterm-256color emacs --daemon'
-alias kill-emacs='env TERM=xterm-256color emacsclient -e '\''(kill-emacs)'\'''
-alias edit='env TERM=xterm-256color emacsclient -c -nw'
+alias start-emacs='emacs --daemon'
+alias kill-emacs='emacsclient -e '\''(kill-emacs)'\'''
+alias edit='emacsclient -c -nw'
 alias lsp4='p4 changes -l -u jdesjarlais | less'
 
 
