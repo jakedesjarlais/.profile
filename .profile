@@ -15,6 +15,9 @@ alias start-emacs='emacs --daemon'
 alias kill-emacs='emacsclient -e '\''(kill-emacs)'\'''
 alias edit='emacsclient -c -nw'
 alias lsp4='p4 changes -l -u jdesjarlais | less'
+alias sshvm='ssh jake@192.168.1.85'
+alias ssh-orange='ssh -p 50500 jdesjarlais@orange.ece.utexas.edu'
+alias ssh-banana='ssh -p 50500 jdesjarlais@banana.ece.utexas.edu'
 
 
 ########### Start up commands ###########
