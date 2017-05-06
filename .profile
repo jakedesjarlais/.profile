@@ -3,10 +3,10 @@ export PATH=$PATH:/scripts/bash
 export TERM=xterm-256color
 if [ $EUID -eq 0 ]; then
     # root prompt
-    export PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
+    export PS1='\[\033]0;\u@\h:\w\007\]\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
 else
     # user prompt
-    export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
+    export PS1='\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 fi
 
 ########### Aliases ########### 
@@ -18,3 +18,5 @@ alias edit='emacsclient -c -nw'
 ########### Start up commands ###########
 
 ########### Bash Functions ###########
+
+
