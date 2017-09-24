@@ -1,5 +1,5 @@
 ########### Environment Variables ###########
-export PATH=$PATH:/scripts/bash
+export PATH=$PATH:/scripts/bash:/scripts/bin
 export TERM=xterm-256color
 if [ $EUID -eq 0 ]; then
     # root prompt
