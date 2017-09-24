@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Remove any conflict config files
+rm -rf ../.tmux.conf ../.emacs.d ../.profile &> /dev/null
+
+# Create soft links to config files in this dirctory from the parent directory
+ln -s .profile.d/.emacs.d	../.emacs.d
+ln -s .profile.d/.tmux.conf	../.tmux.conf
+ln -s .profile.d/.profile	../.profile
