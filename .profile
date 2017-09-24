@@ -10,10 +10,6 @@ else
 fi
 
 ########### Aliases ########### 
-alias start-emacs='emacs --daemon'
-alias kill-emacs='emacsclient -e '\''(kill-emacs)'\'''
-alias edit='emacsclient -c -nw'
-
 
 ########### Start up commands ###########
 
