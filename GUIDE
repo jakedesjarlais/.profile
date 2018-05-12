@@ -1,0 +1,7 @@
+
+
+
+STEPS
+    - download ctags, emacs, tmux, vim
+    - git pull <this repo>
+    - run <repo dir>/setup

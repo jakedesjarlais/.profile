@@ -1,5 +1,6 @@
 ########### Environment Variables ###########
-export PATH=$PATH:/scripts/bash:/scripts/bin
+export PATH=/scripts/bash:/scripts/bin:/usr/local/cuda-8.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/lib64:$LD_LIBRARY_PATH
 export TERM=xterm-256color
 if [ $EUID -eq 0 ]; then
     # root prompt
@@ -10,6 +11,7 @@ else
 fi
 
 ########### Aliases ########### 
+alias ls='ls --color=always' # Show color prompt for ls over ssh
 
 ########### Start up commands ###########
 

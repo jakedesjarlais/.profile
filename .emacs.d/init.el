@@ -22,6 +22,14 @@
 (setq-default tab-width 4)
     ;; c++ tabs
     (setq-default c-basic-offset 4)
+    ;; python tabs
+    (add-hook 'python-mode-hook
+        (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 4)
+            (setq python-indent 4)
+        )
+    )
 
 
 
