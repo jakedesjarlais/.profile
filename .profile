@@ -19,6 +19,21 @@ alias gcm='git checkout master'
 alias gb='git branch'
 
 ########### Functions ##############
+function tcprelay {
+	/usr/local/bin/tcprelay --portoffset 2000 ssh rsync scp &
+}
+
+function ipad_root {
+	ssh -o NoHostAuthenticationForLocalhost=yes -p 2022 root@localhost
+}
+
+function ipad {
+	ssh -o NoHostAuthenticationForLocalhost=yes -p 2022 mobile@localhost
+}
+
+function ipad_scp {
+	scp -o NoHostAuthenticationForLocalhost=yes -r -P 2022 "$1" "$2"
+}
 
 ########### Start up commands ######
 
