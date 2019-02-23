@@ -17,6 +17,7 @@ fi
 alias gst='git status'
 alias gcm='git checkout master'
 alias gb='git branch'
+alias dinkj
 
 ########### Functions ##############
 function tcprelay {
@@ -35,13 +36,29 @@ function ipad_scp {
 	scp -o NoHostAuthenticationForLocalhost=yes -r -P 2022 "$1" "$2"
 }
 
+function dlist {
+	sudo darwinup list
+}
+
+function dinst {
+	sudo darwinup install "$1"
+}
+
+function duinst {
+	sudo darwinup uninstall "$1"
+}
+
+function dpop {
+	sudo darwinup uninstall newest
+}
+
 ########### Start up commands ######
 
 ########### Bash Functions #########
 
 
 ########### Git Setup ##############
-export GIT_EDITOR=edit
+export GIT_EDITOR=vim
 source /usr/local/bin/git-completion.bash
 source /usr/local/bin/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
