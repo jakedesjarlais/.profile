@@ -13,13 +13,34 @@ else
     export PS1='\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 fi
 
+
 ########### Aliases ################
-alias gst='git status'
-alias gcm='git checkout master'
-alias gb='git branch'
-alias dinkj
+
 
 ########### Functions ##############
+
+function gst {
+	git status
+}
+
+function gcm {
+	git checkout master
+}
+
+function gb {
+	git branch
+}
+
+function gch {
+	COMMIT=$1
+	# If we arn't given a commit assume it's the previous commit
+	if [ -z "$COMMIT" ]; then
+		COMMIT=HEAD~
+	fi
+
+	git diff --name-only $COMMIT
+}
+
 function tcprelay {
 	/usr/local/bin/tcprelay --portoffset 2000 ssh rsync scp &
 }
@@ -52,12 +73,15 @@ function dpop {
 	sudo darwinup uninstall newest
 }
 
+
 ########### Start up commands ######
+
 
 ########### Bash Functions #########
 
 
 ########### Git Setup ##############
+
 export GIT_EDITOR=vim
 source /usr/local/bin/git-completion.bash
 source /usr/local/bin/git-prompt.sh
@@ -67,3 +91,4 @@ txtcyn="$(tput setaf 6)"
 textreset="$(tput sgr 0)"
 # TODO
 PS1='\[$textreset\]\u@\h \[$txtcyn\]\W\[$txtred\]$(__git_ps1 " (%s)")\[$textreset\] \$ '
+
