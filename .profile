@@ -41,6 +41,10 @@ function gch {
 	git diff --name-only $COMMIT
 }
 
+function gc {
+	git checkout $1
+}
+
 function tcprelay {
 	/usr/local/bin/tcprelay --portoffset 2000 ssh rsync scp &
 }
