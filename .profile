@@ -1,5 +1,5 @@
 ########### Environment Variables ###########
-export PATH=/scripts/bash:/scripts/bin:/usr/local/cuda-8.0/bin:$PATH
+export PATH=~/.profile.d/scripts/bash:~/.profile.d/scripts/bin:/usr/local/cuda-8.0/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib64:$LD_LIBRARY_PATH
 export TERM=xterm-256color
 export CLICOLOR=1
