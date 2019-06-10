@@ -7,3 +7,5 @@ rm -rf ../.tmux.conf ../.emacs.d ../.profile &> /dev/null
 ln -s .profile.d/.emacs.d	../.emacs.d
 ln -s .profile.d/.tmux.conf	../.tmux.conf
 ln -s .profile.d/.profile	../.profile
+
+git clone https://www.github.com/jakedesjarlais/scripts.git ~/.profile.d/scripts
