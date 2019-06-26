@@ -94,8 +94,10 @@ currentBuildVersion=""
 function _calculateCurrentBuildVersion {
     # Get product major/minor versions from sw_vers command
     productVersion=$(sw_vers | grep ProductVersion)
+    productVersion=$(echo $productVersion | tr "." " ")
+    productVersion=$(echo $productVersion)
     productVersion="${productVersion##*:}"
-    productVersion="$(echo $productVersion | tr -d '[:space:]')"
+    #productVersion="$(echo $productVersion | tr -d '[:space:]')"
 
     # Get build version from sw_vers command
     buildVersion=$(sw_vers | grep BuildVersion)
@@ -104,7 +106,7 @@ function _calculateCurrentBuildVersion {
 
 
     # Extract major/minor version for the product version string '10.15.1' -> {10, 15, 1}
-    IFS='.'
+    IFS=' '
     productVersionSplit=$productVersion
     read -ra productVersionSplit <<< "$productVersionSplit"
     majorVersionNumber="${productVersionSplit[1]}"
@@ -141,8 +143,8 @@ function _calculateCurrentBuildVersion {
     # For debugging purposes
     #echo $buildVersion
     #echo $productVersion
-    #echo $majorProductVersion
-    #echo $minorProductVersion
+    #echo $majorVersionString
+    #echo $minorVersionString
     
     currentBuildVersion="macOS""$majorVersionString""$minorVersionString""$buildVersion"
 }
@@ -168,7 +170,7 @@ function buildroot {
            update="$1"
         fi
 
-        projectName="$(basename currentRepoPath)"
+        projectName="$(basename $currentRepoPath)"
 	fi
 
     # Set projectName to all lower case to make comparing easier
@@ -210,6 +212,7 @@ function buildroot {
 
 
     sudo echo "Building root for $projectName against $update"
+    sudo echo "sudo buildit -project $projectName -update $update -archive $sourcePath"
     sudo buildit -project $projectName -update $update -archive $sourcePath
 }
 
