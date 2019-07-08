@@ -159,6 +159,7 @@ function buildroot {
 
 
     # Grab input
+    # TODO: logic needs a refactor. We should only try to grab the repo name IF we aren't give other valid input, so essentially we should try the first input and if it doesn't work then try the repo name as input
 	if [ -z "$currentRepoPath" ] || [ ! -z "$2" ]; then
         projectName="$1"
 
